@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- <script src="js/function.js"></script> -->
+  <script type="text/javascript" src="js/script.js"></script>
+  <title>〇〇FITNESS</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>〇〇FITNESS</h1>
+    <div class="menu">
+      <nav>
+        <ul>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">施設案内</a></li>
+          <li><a href="#">採用情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+          <li class="phone"><i class="fas fa-mobile-alt"></i>012-3456-7890</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="humburger"><!-- humburger-menu -->
+      <nav class="menu">
+        <ul>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">施設案内</a></li>
+          <li><a href="#">採用情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="#">012-3456-7890</a></li>
+        </ul>
+      </nav>
+      <div id="navArea">
+        <nav>
+          <div class="inner">
+            <ul>
+              <li><a href="#">TOP</a></li>
+              <li><a href="#">施設案内</a></li>
+              <li><a href="#">採用情報</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+              <li><a href="#">012-3456-7890</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div id="mask"></div>
+
+      </div>
+    </div><!-- humburger-menu -->
+
+  </header>
+
+  <main>
+    <article class="mainvisual">
+      <img src="images/mv.jpg" alt="">
+      <h2>鍛える。</h2>
+    </article>
+    <article class="topics">
+      <section class="content-wrapper">
+        <div class="heading">
+          <h2>TOPICS</h2>
+        </div>
+        <div class="content">
+          <table>
+            <tbody>
+              <tr>
+                <th>2020.00.00</th>
+                <td>タイトルが入ります。</td>
+              </tr>
+              <tr>
+                <th>2020.00.00</th>
+                <td>タイトルが入ります。タイトルが入ります。</td>
+              </tr>
+              <tr>
+                <th>2020.00.00</th>
+                <td>タイトルが入ります。タイトルが入ります。</td>
+              </tr>
+              <tr>
+                <th>2020.00.00</th>
+                <td>タイトルが入ります。</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="btn"><a href="#">more</a></p>
+        </div>
+      </section>
+    </article>
+    <article class="institution">
+      <section class="content-wrapper">
+        <div class="content">
+          <h2>施設案内</h2>
+          <p>
+            のびのびできる空間をご用意しております。
+          </p>
+          <p class="btn"><a href="#">more</a></p>
+        </div>
+      </section>
+    </article>
+    <article class="recruit">
+      <section class="content-wrapper">
+        <div class="content">
+          <h2>採用情報</h2>
+          <ul>
+            <li><a href="#">
+                <figure><img src="images/alb5.jpg" alt=""></figure><span>正社員</span>
+              </a></li>
+            <li><a href="#">
+                <figure><img src="images/alb3.jpg" alt=""></figure><span>アルバイト</span>
+              </a></li>
+          </ul>
+        </div>
+      </section>
+    </article>
+    <article class="contact">
+      <ul>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer">
+    <section class="content-wrapper">
+      <div class="high">
+        <h1>〇〇FITNESS</h1>
+        <ul>
+          <li><a href="#">施設案内</a></li>
+          <li><a href="#">採用情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="low">
+        〒000-0000<span>東京都〇〇</span><br>
+        TEL：012-3456-7890
+      </div>
+      <p>&copy;〇〇FITNESS Co.,Ltd.</p>
+    </section>
+  </footer>
+
+  <script>
+    (function ($) {
+      var $nav = $('#navArea');
+      var $btn = $('.toggle_btn');
+      var $mask = $('#mask');
+      var open = 'open'; // class
+      // menu open close
+      $btn.on('click', function () {
+        if (!$nav.hasClass(open)) {
+          $nav.addClass(open);
+        } else {
+          $nav.removeClass(open);
+        }
+      });
+      // mask close
+      $mask.on('click', function () {
+        $nav.removeClass(open);
+      });
+    })(jQuery);
+  </script>
+
+</body>
+
+</html>
